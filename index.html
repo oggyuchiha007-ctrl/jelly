@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hyperion Apex — 2025</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #0a0a0a;
+      color: #f0f0f0;
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 25px 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.7), transparent);
+      backdrop-filter: blur(8px);
+      transition: all 0.4s;
+    }
+
+    header.scrolled {
+      background: rgba(0,0,0,0.85);
+      padding: 15px 5%;
+    }
+
+    .logo {
+      font-size: 1.9rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+      background: linear-gradient(90deg, #ff3366, #ffaa33);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    nav a {
+      color: #ddd;
+      text-decoration: none;
+      margin-left: 2.2rem;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #ff3366;
+    }
+
+    .hero {
+      height: 100vh;
+      min-height: 780px;
+      background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.75)),
+                  url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=2340&auto=format&fit=crop') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero-content {
+      max-width: 900px;
+      padding: 0 20px;
+    }
+
+    .hero h1 {
+      font-size: clamp(3.8rem, 9vw, 8.5rem);
+      font-weight: 900;
+      line-height: 0.92;
+      margin-bottom: 0.4rem;
+      letter-spacing: -2px;
+      background: linear-gradient(90deg, #fff, #ddd, #aaa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero h2 {
+      font-size: clamp(1.6rem, 4vw, 3.2rem);
+      font-weight: 300;
+      color: #ff3366;
+      margin-bottom: 2rem;
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      max-width: 620px;
+      margin: 0 auto 2.5rem;
+      color: #ccc;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 16px 42px;
+      background: #ff3366;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 50px;
+      margin: 0 12px;
+      transition: all 0.35s;
+      border: 2px solid #ff3366;
+    }
+
+    .btn:hover {
+      background: transparent;
+      transform: translateY(-3px);
+      box-shadow: 0 12px 30px rgba(255,51,102,0.35);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: white;
+      border-color: white;
+    }
+
+    .btn-outline:hover {
+      background: white;
+      color: #111;
+    }
+
+    .features {
+      padding: 140px 5% 100px;
+      text-align: center;
+    }
+
+    .features h2 {
+      font-size: 3.5rem;
+      margin-bottom: 4rem;
+      background: linear-gradient(90deg, #ffaa33, #ff3366, #aa33ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 40px;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: rgba(30,30,30,0.6);
+      border-radius: 16px;
+      padding: 40px 30px;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.08);
+      transition: all 0.4s;
+    }
+
+    .card:hover {
+      transform: translateY(-15px);
+      border-color: #ff3366;
+      box-shadow: 0 25px 60px rgba(255,51,102,0.18);
+    }
+
+    .card h3 {
+      font-size: 1.8rem;
+      margin-bottom: 1.2rem;
+      color: #ffaa33;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 5.8rem; }
+      .hero h2 { font-size: 2.4rem; }
+      nav a { margin-left: 1.4rem; font-size: 0.95rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header id="header">
+    <div class="logo">HYPERION</div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#features">Features</a>
+      <a href="#">Gallery</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>APEX</h1>
+      <h2>2025 Concept</h2>
+      <p>1,420 hp • 0–100 km/h in 2.1s • Active aero • Full carbon-titanium monocoque</p>
+      
+      <div>
+        <a href="#" class="btn">Reserve Now</a>
+        <a href="#" class="btn btn-outline">Discover Specs</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="features" id="features">
+    <h2>Next-Level Engineering</h2>
+    
+    <div class="grid">
+      <div class="card">
+        <h3>1420 HP Quad-Motor</h3>
+        <p>Torque vectoring AWD • 0–200 km/h under 6 seconds • Top speed 438 km/h (limited)</p>
+      </div>
+      
+      <div class="card">
+        <h3>Active Aerodynamics</h3>
+        <p>Morphing front splitter • Rear wing with DRS mode • Underbody venturi tunnels</p>
+      </div>
+      
+      <div class="card">
+        <h3>Carbon-Titanium Structure</h3>
+        <p>Vehicle weight 1,390 kg • Torsional rigidity 62,000 Nm/deg • F1-grade materials</p>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Simple header scroll effect
+    window.addEventListener('scroll', () => {
+      const header = document.getElementById('header');
+      header.classList.toggle('scrolled', window.scrollY > 100);
+    });
+  </script>
+
+</body>
+</html>
